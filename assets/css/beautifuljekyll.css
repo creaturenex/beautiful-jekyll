@@ -3,6 +3,9 @@ layout: null
 ---
 
 @import url("pygment_highlights.css");
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+font-family: 'Mona-Sans', sans-serif;
 
 /* --- General --- */
 
@@ -11,11 +14,11 @@ html {
 }
 
 body {
-  font-family: 'Lora', 'Times New Roman', serif;
+  font-family: 'Mona-Sans',sans-serif;
   font-size: 1.125rem;
   color: {{ site.text-col | default: "#404040" }};
   position: relative;
-  background-color: {{ site.page-col | default: "#FFFFFF" }};
+  background-color: {{ site.page-col | default: "#EEEEEE" }};
   {% if site.page-img %}
   background-image: url({{ site.page-img | relative_url }});
   background-attachment: fixed;
@@ -27,7 +30,7 @@ p {
   margin: 1.875rem 0;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Mona-Sans', sans-serif;
   font-weight: 800;
   line-height: 1.1;
 }
@@ -123,7 +126,8 @@ img {
 /* --- Navbar --- */
 
 .navbar-custom {
-  background-color: {{ site.navbar-col | default: "#EAEAEA" }};
+  /* background-color: {{ site.navbar-col | default: "#EAEAEA" }}; */
+  background-image: linear-gradient(to bottom right, #29F499, #09B2E5);
   border-bottom: 1px solid {{ site.navbar-border-col | default: "#DDDDDD" }};
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   {% if site.navbar-img %}
@@ -384,7 +388,8 @@ footer {
   border-top: 1px #EAEAEA solid;
   margin-top: 3.125rem;
   font-size: 0.875rem;
-  background-color: {{ site.footer-col | default: "#EAEAEA" }};
+  /* background-color: {{ site.footer-col | default: "#EAEAEA" }}; */
+  background-image: linear-gradient(to bottom right, #29F499, #09B2E5);
   {% if site.footer-img %}
     background-image: url({{ site.footer-img | relative_url }});
     background-attachment: fixed;
@@ -410,7 +415,7 @@ footer .list-inline {
   margin-bottom: 1.875rem;
 }
 footer .copyright {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
   text-align: center;
   margin-bottom: 0;
   margin-top: 0;
@@ -422,7 +427,7 @@ footer .theme-by {
 footer .footer-custom-content {
   text-align: center;
   margin-bottom: 0.9375rem;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', sans-serif
 }
 
 @media (min-width: 768px) {
@@ -464,7 +469,7 @@ footer .footer-custom-content {
 
 .post-preview a {
   text-decoration: none;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
   color: {{ site.text-col | default: "#404040" }};
 }
 
@@ -485,7 +490,7 @@ footer .footer-custom-content {
 }
 .post-preview .post-meta,
 .post-heading .post-meta {
-  color: #808080;
+  color: #444;
   font-size: 1.125rem;
   font-style: italic;
   margin: 0 0 0.625rem;
@@ -671,8 +676,10 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
 .intro-header.big-img .page-heading,
 .intro-header.big-img .post-heading {
   padding: 6.25rem 0;
-  color: #FFF;
+  color: #EEE;
   text-shadow: 1px 1px 3px #000;
+  background-color: rgba(255, 255, 255, 0.5
+  );
 }
 .intro-header .page-heading h1 {
   margin-top: 0;
